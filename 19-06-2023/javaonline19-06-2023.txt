@@ -1,0 +1,73 @@
+
+		------------ Java Programming -----------
+
+	Excecution Flow of C-CPP and Java Program:
+	-------------------------------------------
+
+
+		     BASIC 
+		     COBOL						       |--> Sun Microsystem -> Java
+	Assembly --> ForTran --> ALGOL60 --> CPL --> BCPL --> B --> C==>C++ ---|--> Microsoft Corpo.-> .Net
+	(Up,UC)	     RPG						       |--> ....
+		     SIMULA
+		     ....
+
+
+	C and c++ Programming					Java Programming
+
+	Instructions		Program Name			Instructions 		Program Name
+		|_________________|					|__________________|
+			|							  |
+			|							  |
+	source code   *.c / *.cpp						*.java
+			|							  |
+			|							  |
+		  c/cpp Compiler					    Java Compiler	
+			|							(javac)
+			|							  |
+	backup file   *.bak						      *.class
+			|						      (Byte Code)
+			|							  |
+	Linker -------->|					-----------------------------------
+			|					|		|		|
+			|				      Windows          MAC            Linux..
+	Object code   *.obj					|		|		|
+	file		|				       JVM	       JVM             JVM  	
+			|					|		|		|
+	Executable    *.exe 				   Native code     Native code       Native code	
+	file		|					|		|		|
+		       Run				     Output	    Output	      Output
+			|
+		     Output
+
+
+	Platform Dependent Code						Platform Independent Code
+
+					platform = OS + Processor Artec.
+
+
+ How To Write a java code? and Where?
+ ------------------------------------
+
+	- Editor - Notepad, Editplus, Notepad++ ....
+	- IDE    - Netbeans, Eclipse, Intellijidea ....
+
+	Bydefault Java does not provides any editor
+
+How to Download and install Java?
+----------------------------------
+
+	- open https://www.oracle.com/in/java/technologies/downloads/#jdk20-windows
+	- Install
+	- run command on cmd (java -version) to check, it is installed on your PC or not.
+
+Your First Program Using Notepad as an Editor:
+-----------------------------------------------
+
+
+
+
+
+
+
+
