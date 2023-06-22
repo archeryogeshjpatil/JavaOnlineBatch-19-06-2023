@@ -1,0 +1,239 @@
+
+		------------ Java Programming -----------
+
+	Excecution Flow of C-CPP and Java Program:
+	-------------------------------------------
+
+	language Means?
+
+	programming Language?
+
+				CPU
+			_________________________
+			|			| ---> Command signals
+			|	CU		|
+			|_______________________|
+	 Input		|			|        Output    
+	   [ ]		|	ALU		|   |-->  [ ]
+	    | 		|_______________________|   |
+	    | 		|			|   |
+	    |---------->|	IM		|---|
+			|_______________________|
+				^	|
+			________|_______V_________
+			|			|
+			|	EM		|
+			|_______________________|
+ 
+
+
+		     BASIC 
+		     COBOL						       |--> Sun Microsystem(Now Oracle) -> Java
+	Assembly --> ForTran --> ALGOL60 --> CPL --> BCPL --> B --> C==>C++ ---|--> Microsoft Corpo.-> .Net
+	(Up,UC)	     RPG						       |--> ....
+		     SIMULA
+		     ....
+
+
+	C and C++ Programming					Java Programming
+
+	Instructions		Program Name			Instructions 		Program Name
+		|_________________|					|__________________|
+			|							  |
+			|							  |
+	source code   *.c / *.cpp						*.java
+			|							  |
+			|							  |
+		  c/cpp Compiler					    Java Compiler			Compilation
+			|							(javac)
+			|							  |
+	backup file   *.bak						      *.class
+			|						      (Byte Code)
+			|							  |
+	Linker -------->|					-----------------------------------
+			|					|		|		|
+			|				      Windows          MAC            Linux..
+	Object code   *.obj					|		|		|
+	file		|				       JVM	       JVM             JVM  		Interpretation
+			|					|		|		|
+	Executable    *.exe 				   Native code     Native code       Native code	
+	file		|					|		|		|
+		       Run				     Output	    Output	      Output
+			|
+		     Output
+
+
+	Platform Dependent Code						Platform Independent Code
+
+					platform = OS + Processor Artec.
+
+
+ How To Write a java code? and Where?
+ ------------------------------------
+
+	- Editor - Notepad, Editplus, Notepad++ ....
+	- IDE    - Netbeans, Eclipse, Intellijidea ....
+
+	Bydefault Java does not provides any editor
+
+How to Download and install Java?
+----------------------------------
+
+	- open https://www.oracle.com/in/java/technologies/downloads/#jdk20-windows
+	- Install
+	- run command on cmd (java -version) to check, it is installed on your PC or not.
+
+Your First Program Using Notepad as an Editor:
+-----------------------------------------------
+
+	// Welcome Program
+
+class WelcomeProgram
+{
+	public static void main(String []args)
+	{
+		System.out.print("Welcome to Java Programming");
+	}
+}
+
+ - Compile and execute the java code
+
+	- Open Notepad, Write a code
+	- Open the Commant prompt and move to cadebase
+	- compile the code using >> javac <prog_nm>.java
+	- run the code using >> java <prog_nm>
+
+
+//-------------------------------------------------------------------------------------------------------------------
+
+- History: Java is devloped by James Gosling
+
+
+- Applications devloped using java:
+
+	- Standalone applications(Desktop Applications)
+	- Web Applications
+	- Enterprise Applications
+	- Mobile Apps
+	- Games
+	- Electronic systems and interfacing
+	
+
+- Java Version History:
+
+	- 1995 : first version (Alpha and beta)
+	- 1996 : JDK 1.0
+	- 1997 : JDK 1.1
+	- 1998 : J2SE 1.2
+	- 2000 : J2SE 1.3
+	- 2002 : J2SE 1.4
+	- 2004 : J2SE 5.0
+	- 2006 : Java SE 6
+	- 2011 : Java SE 7
+	- 2014 : Java SE 8
+	- 2017 : Java SE 9
+	.....
+	-  March 2023 Now Java SE 20
+	-  sept 2023 Now Java SE 21
+
+	
+- Java Buzzwords ( Different Features of Java)
+
+	- Simple
+	- Platform Independent
+	- Object Oriented programming language
+	- Secure
+	- Architecture netural
+	- half compiled and half interpreted language.
+	- Robust
+	- having high performance
+	- Dynamic
+	- Multithreaded language
+	- Distributed
+
+
+- Using command line arguments in Java (This is one of the input method in java)
+
+class DemoCmdLn
+{
+	public static void main(String []args)
+	{
+		System.out.print(" Demo Command Line Arguments");
+	}
+}
+
+	- When we execute the code like
+
+		>java DemoCmdLn  will will get output "Demo Command Line Arguments"
+		
+			in this case main collects NULL.
+
+		But when we execute same code like
+
+		>java DemoCmdLn hello all 20   The array of three strings passed as an argument
+					       to main method. and which is collected in []args
+					       but will get same output i.e.
+
+						"Demo Command Line Arguments"
+
+		How to access the arguments passed thw command line
+
+	    args   0      1    2
+		[hello] [all] [20]     
+
+
+class DemoCmdLn
+{
+	public static void main(String []args)
+	{
+		System.out.print("\n Demo Command Line Arguments");
+		System.out.println("\n First String:"+args[0]);
+		System.out.println(" Second String:"+args[1]);
+		System.out.print(" Third String:"+args[2]);
+	}
+}
+
+	 // println() is like printf() in C prog. ends with newline character('\n')
+
+
+//-------------------------------------------------------------------------------------------------------------------
+
+
+	Character Set: In C --> ASCII Characters are used but Java uses the UNICODE system.
+
+				In C prog. char data type needs only 1 byte. But Java character needs 2 bytes.
+				As ASCII is subset of UNICODE, The value of ASCII codes is remains same but
+				all are represented in 16 bit.
+
+						in ASCII		      in UNICODE
+				 suppose A --> 0010 1101		0000 0000 0010 1101
+
+
+	Java Tokens: It contains constants, Keyword identifiers, literals, Operators and Separators. collectively
+		     known as Tokens, which acts as building block for java instruction.
+
+	Instruction: Command issued to perform a specific task.
+
+	Program:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
