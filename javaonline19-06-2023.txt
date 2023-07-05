@@ -1,0 +1,1354 @@
+
+		------------ Java Programming -----------
+
+	Excecution Flow of C-CPP and Java Program:
+	-------------------------------------------
+
+	language Means?
+
+	programming Language?
+
+				CPU
+			_________________________
+			|			| ---> Command signals
+			|	CU		|
+			|_______________________|
+	 Input		|			|        Output    
+	   [ ]		|	ALU		|   |-->  [ ]
+	    | 		|_______________________|   |
+	    | 		|			|   |
+	    |---------->|	IM		|---|
+			|_______________________|
+				^	|
+			________|_______V_________
+			|			|
+			|	EM		|
+			|_______________________|
+ 
+
+
+		     BASIC 
+		     COBOL						       |--> Sun Microsystem(Now Oracle) -> Java
+	Assembly --> ForTran --> ALGOL60 --> CPL --> BCPL --> B --> C==>C++ ---|--> Microsoft Corpo.-> .Net
+	(Up,UC)	     RPG						       |--> ....
+		     SIMULA
+		     ....
+
+
+	C and C++ Programming					Java Programming
+
+	Instructions		Program Name			Instructions 		Program Name
+		|_________________|					|__________________|
+			|							  |
+			|							  |
+	source code   *.c / *.cpp						*.java
+			|							  |
+			|							  |
+		  c/cpp Compiler					    Java Compiler			Compilation
+			|							(javac)
+			|							  |
+	backup file   *.bak						      *.class
+			|						      (Byte Code)
+			|							  |
+	Linker -------->|					-----------------------------------
+			|					|		|		|
+			|				      Windows          MAC            Linux..
+	Object code   *.obj					|		|		|
+	file		|				       JVM	       JVM             JVM  		Interpretation
+			|					|		|		|
+	Executable    *.exe 				   Native code     Native code       Native code	
+	file		|					|		|		|
+		       Run				     Output	    Output	      Output
+			|
+		     Output
+
+
+	Platform Dependent Code						Platform Independent Code
+
+					platform = OS + Processor Artec.
+
+
+ How To Write a java code? and Where?
+ ------------------------------------
+
+	- Editor - Notepad, Editplus, Notepad++ ....
+	- IDE    - Netbeans, Eclipse, Intellijidea ....
+
+	Bydefault Java does not provides any editor
+
+How to Download and install Java?
+----------------------------------
+
+	- open https://www.oracle.com/in/java/technologies/downloads/#jdk20-windows
+	- Install
+	- run command on cmd (java -version) to check, it is installed on your PC or not.
+
+Your First Program Using Notepad as an Editor:
+-----------------------------------------------
+
+	// Welcome Program
+
+class WelcomeProgram
+{
+	public static void main(String []args)
+	{
+		System.out.print("Welcome to Java Programming");
+	}
+}
+
+ - Compile and execute the java code
+
+	- Open Notepad, Write a code
+	- Open the Commant prompt and move to cadebase
+	- compile the code using >> javac <prog_nm>.java
+	- run the code using >> java <prog_nm>
+
+
+//-------------------------------------------------------------------------------------------------------------------
+
+- History: Java is devloped by James Gosling
+
+
+- Applications devloped using java:
+
+	- Standalone applications(Desktop Applications)
+	- Web Applications
+	- Enterprise Applications
+	- Mobile Apps
+	- Games
+	- Electronic systems and interfacing
+	
+
+- Java Version History:
+
+	- 1995 : first version (Alpha and beta)
+	- 1996 : JDK 1.0
+	- 1997 : JDK 1.1
+	- 1998 : J2SE 1.2
+	- 2000 : J2SE 1.3
+	- 2002 : J2SE 1.4
+	- 2004 : J2SE 5.0
+	- 2006 : Java SE 6
+	- 2011 : Java SE 7
+	- 2014 : Java SE 8
+	- 2017 : Java SE 9
+	.....
+	-  March 2023 Now Java SE 20
+	-  sept 2023 Now Java SE 21
+
+	
+- Java Buzzwords ( Different Features of Java)
+
+	- Simple
+	- Platform Independent
+	- Object Oriented programming language
+	- Secure
+	- Architecture netural
+	- half compiled and half interpreted language.
+	- Robust
+	- having high performance
+	- Dynamic
+	- Multithreaded language
+	- Distributed
+
+
+- Using command line arguments in Java (This is one of the input method in java)
+
+class DemoCmdLn
+{
+	public static void main(String []args)
+	{
+		System.out.print(" Demo Command Line Arguments");
+	}
+}
+
+	- When we execute the code like
+
+		>java DemoCmdLn  will will get output "Demo Command Line Arguments"
+		
+			in this case main collects NULL.
+
+		But when we execute same code like
+
+		>java DemoCmdLn hello all 20   The array of three strings passed as an argument
+					       to main method. and which is collected in []args
+					       but will get same output i.e.
+
+						"Demo Command Line Arguments"
+
+		How to access the arguments passed thw command line
+
+	    args   0      1    2
+		[hello] [all] [20]     
+
+
+class DemoCmdLn
+{
+	public static void main(String []args)
+	{
+		System.out.print("\n Demo Command Line Arguments");
+		System.out.println("\n First String:"+args[0]);
+		System.out.println(" Second String:"+args[1]);
+		System.out.print(" Third String:"+args[2]);
+	}
+}
+
+	 // println() is like printf() in C prog. ends with newline character('\n')
+
+
+//-------------------------------------------------------------------------------------------------------------------
+
+
+	Character Set: In C --> ASCII Characters are used but Java uses the UNICODE system.
+
+				In C prog. char data type needs only 1 byte. But Java character needs 2 bytes.
+				As ASCII is subset of UNICODE, The value of ASCII codes is remains same but
+				all are represented in 16 bit.
+
+						in ASCII		      in UNICODE
+				 suppose A --> 0010 1101		0000 0000 0010 1101
+
+
+	Java Tokens: It contains constants, Keyword, identifiers, literals, Operators and Separators. collectively
+		     known as Tokens, which acts as building block for java instruction.
+
+			constants: Are the elemrnts having fix value
+			Keyword: Reserved words whose meaning is known to compiler.  In java there are 50 keywords.
+			identifiers: Name given to any programming element. (i.e. array name, class name, method name...)
+			literals: Are the constant value represented in the program
+
+					i.e
+						4   -- integer literal
+						3.5 -- fractional literal 
+						'A' -- character literal
+						"hello" -- string literal
+						
+			operators: are the symbols used to process the data.
+
+			Separators: () [] {} . , ; :
+						
+			
+	Instruction: Command issued to perform a specific task.
+
+	Program: collection of instructions.
+
+
+//------------------------------------------------------------------------------------------------------
+
+	Data Types in Java: Data type is tool which is used to allocate the memory.
+
+				
+						Java
+					      Data Types
+						  |
+				-----------------------------------------
+				|					|
+			Primitive data types			Non-Primitive data types
+				|					|
+	 ----------------------------------------		---------------------------------
+	 |					|		|	|	|	|	
+     Numeric				      boolean	     Array     string  class  interface..	
+	|					
+  ----------------------- 
+  |			|
+character 	     integral
+ char			|
+	------------------------
+	|			|
+    Integer 		  Fractional
+	|			|
+	|- byte			|- float
+	|- short		|- double
+	|- int
+	|- long
+	
+
+
+ These data type are used in the type decl. instruction to know about the memory need.
+ 
+	int x;		short a,b,c;	float f1=3.4f;		double d1=4.5,d2=632.67		char ch='D";	long v1=48l 
+					or float f1=3.4F;							or long v1=48L
+
+
+	// WAP to init different variables and display their values.
+
+class DemoVarDecl
+{
+	public static void main(String []args)
+	{
+		int x=459;		
+		short a=10;	
+		long b=67L;
+		float f1=3.4f;		
+		double d1=4.5,d2=632.67;	
+		char ch='D';
+
+		System.out.println("value of x is: "+x);
+		System.out.println("a="+a+"\t b="+b);
+		System.out.println("f1 is "+f1+"\t d1 is "+d1+"\t d2 is "+d2);
+		System.out.println("Character is: "+ch);					
+	}
+}
+
+Output of above program:
+
+value of x is: 459
+a=10     b=67
+f1 is 3.4        d1 is 4.5       d2 is 632.67
+Character is: D
+
+
+
+// Different ways of taking the data from outside world
+
+	
+	1. using the command line arguments
+
+class InputCmdLn
+{
+	public static void main(String []args)
+	{
+		String s1="", s2="";
+		
+		s1=args[0];
+		s2=args[1];
+
+		System.out.println("S1 is: "+s1);
+		System.out.println("S2 is: "+s2);
+	}
+}
+
+
+	// Using command line arguments to input the numeric values
+
+
+class InputCmdLn1
+{
+	public static void main(String []args)
+	{
+		int x;
+		double y;
+		
+		x=Integer.parseInt(args[0]);			
+		y=Double.parseDouble(args[1]);
+
+		System.out.println("x is: "+x);
+		System.out.println("y is: "+y);
+
+		System.out.println("x is: "+(x+10));
+		System.out.println("y is: "+(y+10));
+	}
+}
+
+
+
+//--------------------------------------------------------------------------------------------------------------
+
+	
+	int x=10;		class Integer				Byte, Short, Long, Float, Double
+				{					Character, String
+	x				int xxx;
+	[ 10 ]				.......
+					static int parseInt(String ...)		class String
+					{					{
+					     ....					char ..[];
+					     return <int_val>;				...
+					}						<methods>
+				}						}
+
+
+				Integer.parseInt(args[0])
+
+
+
+	folder containing all above classes named (lang), Technically it is known as package
+	there are some other packages e.g. awt, io, swing.....
+
+	all these packages are sub-folders of main folder named java
+
+					java
+					  |
+			----------------------------------------
+			|	|	|	|	|
+		       lang    io      awt	swing  .....
+
+
+import java.lang.String;	OR	import java.lang.*; [ Actually we are not importing lang package]
+import java.lang.System;				    [ because it is imported bydefault          ]
+class xxxx
+{
+	public static void main(String []args)
+	{
+		System.out. xxxxx
+	}
+}
+
+
+ /// Another way of taking input - using keyboard 
+ //  (Here Try catch block is used to remove the error doue to readline() method)
+
+// WAP to input one integer and one double value using keyboard and just display both the values.
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+class InputDemoKB
+{	
+	public static void main(String []args)
+	{
+		// allocate the memory to store the data
+		int a=0;
+		double b=0.0;	
+		
+		// create the input stream
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+
+		// input the data
+		System.out.println("\n Enter the int value: ");
+		try{ a=Integer.parseInt(br.readLine()); }catch(Exception e){}
+
+		System.out.println("\n Enter the double value: ");
+		try{ b=Double.parseDouble(br.readLine()); }catch(Exception e){}
+		
+		isr.close();
+		br.close();
+
+		System.out.println("a="+a+"\t b="+b);
+
+	}
+}
+
+//******
+
+
+E:\JavaOnlineBatch-19-06-2023\JavaOnlineBatch-19-06-2023\24-06-2023>javac InputDemoKB.java
+InputDemoKB.java:17: error: unreported exception IOException; must be caught or declared to be thrown
+                a=Integer.parseInt(br.readLine());
+                                              ^
+InputDemoKB.java:20: error: unreported exception IOException; must be caught or declared to be thrown
+                b=Double.parseDouble(br.readLine());
+                                                ^
+2 errors
+
+E:\JavaOnlineBatch-19-06-2023\JavaOnlineBatch-19-06-2023\24-06-2023>javac InputDemoKB.java
+InputDemoKB.java:17: error: cannot find symbol
+                try{ a=Integer.parseInt(br.readLine()); }catch(Exeception e){}
+                                                               ^
+  symbol:   class Exeception
+  location: class InputDemoKB
+InputDemoKB.java:20: error: cannot find symbol
+                try{ b=Double.parseDouble(br.readLine()); }catch(Exeception e){}
+                                                                 ^
+  symbol:   class Exeception
+  location: class InputDemoKB
+2 errors
+
+E:\JavaOnlineBatch-19-06-2023\JavaOnlineBatch-19-06-2023\24-06-2023>javac InputDemoKB.java
+InputDemoKB.java:22: error: variable a might not have been initialized
+                System.out.println("a="+a+"\t b="+b);
+                                        ^
+InputDemoKB.java:22: error: variable b might not have been initialized
+                System.out.println("a="+a+"\t b="+b);
+                                                  ^
+2 errors
+
+E:\JavaOnlineBatch-19-06-2023\JavaOnlineBatch-19-06-2023\24-06-2023>javac InputDemoKB.java
+
+E:\JavaOnlineBatch-19-06-2023\JavaOnlineBatch-19-06-2023\24-06-2023>java InputDemoKB
+
+ Enter the int value:
+12
+
+ Enter the double value:
+5.643
+a=12     b=5.643
+
+E:\JavaOnlineBatch-19-06-2023\JavaOnlineBatch-19-06-2023\24-06-2023>
+
+
+
+*/
+
+//----------------------------------------------------------------------------------------------------
+
+/*
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+class InputBRISR
+{
+	public static void main(String []args)
+	{
+		int x=0;
+		double y=0.0;
+
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+
+		try
+		{ 
+			System.out.print("Enter the int value: ");
+			x=Integer.parseInt(br.readLine());
+			System.out.print("Enter the double value: ");
+		 	y=Double.parseDouble(br.readLine()); 
+
+		}
+		catch(Exception e)
+		{
+		}
+	
+		System.out.print("x: "+x+"\t y: "+y);
+	}
+}
+*/
+//-----------------------------------------------------------------------------------------------
+
+import java.io.*;
+class InputBRISR
+{
+	public static void main(String []args) throws Exception
+	{
+		int x=0;
+		double y=0.0;
+
+		InputStreamReader isr=new InputStreamReader(System.in);
+		BufferedReader br=new BufferedReader(isr);
+
+		System.out.print("Enter the int value: ");
+		x=Integer.parseInt(br.readLine());
+		System.out.print("Enter the double value: ");
+		y=Double.parseDouble(br.readLine()); 
+		System.out.print("x: "+x+"\t y: "+y);
+
+		isr.close();
+		br.close();
+	}
+}
+	
+
+//------------------------------------------------------------------------------------------------
+
+	// Operators in java
+
+	1. Assignment operator(=)
+
+		Assigns the constant at it's rh+ or value of bariable at its rh+ or ans of expr
+		at its rh+ to variable at left.
+
+		i.e.		x=10;		y=x;		z=x+y;
+
+		the assignment operator can be used in the short hand operation
+
+		x=x+10	<---> x+=10
+		x=x*10	<---> x*=10
+		.....
+
+class DemoAssign
+{
+	public static void main(String []args)
+	{
+		int x,y,z;
+
+		x=10;
+		y=x;
+		z=x+y;
+		System.out.println("\n x="+x+"\t y="+y+"\t z="+z);
+		
+		x+=10;
+		System.out.println("\n Again x="+x);
+	}
+}
+
+//---------------------------------------------------------------------------------------------------
+	
+	// Unary Operators (- ++ -- (type) )   [Note that sizeof is absent in java ]
+
+	- The minus operator(-): It will gives the opposite value
+
+		suppose,	x=10;
+				y=-x;	// -10 will be assigned to y
+
+
+	- increament(++) anf decreament(--) operator: Incr operator increases the value of operand by 1
+						      and -- operator decreases the value by 1.
+
+
+		pre					post
+		++x	<--->	x=x+1		<--->	x++
+		--x	<===>	x=x-1		<===>	x--
+
+		Then what is difference,
+
+		z=++x+y--;	(suppose x=4 and y=9)
+
+		1. operate all pre operators (x become 5)
+		2. calc. the basic expr. with current values (z=x+y, so z become 14)
+		3. operate all post post operators.
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+class DemoUnary
+{
+	public static void main(String []args) throws Exception
+	{
+		int x=0,y=0,z=0;
+		
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.println("\n Enter the values of x and y: ");
+		x=Integer.parseInt(br.readLine());
+		y=Integer.parseInt(br.readLine());
+
+		z=-x;
+		System.out.println("\n values of x="+x+"\t y="+y+"\t z="+z);
+
+		++x;
+		y--;
+		System.out.println("\n values of x="+x+"\t y="+y+"\t z="+z);
+
+		z=++x+y--;
+		System.out.println("\n values of x="+x+"\t y="+y+"\t z="+z);
+	}
+}			 
+
+
+//-----------------------------------------------------------------------------------
+
+	- (type): It refers to the type casting. i.e. changing the type of variable
+		  only at the time of calculation.
+
+
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+class DemoUnary1
+{
+	public static void main(String []args) throws Exception
+	{
+		int x=0,y=0;
+		double z=0.0;
+		
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.println("\n Enter the values of x and y: ");
+		x=Integer.parseInt(br.readLine());
+		y=Integer.parseInt(br.readLine());
+
+		z=x/y;	// as int/int the fraction part will be eliminated
+		System.out.println("\n ans is: "+z);
+
+		z=(double)x/y;	
+		System.out.println("\n ans is: "+z);	
+
+		z=x/(double)y;	
+		System.out.println("\n ans is: "+z);	
+
+		z=(double)x/(double)y;	
+		System.out.println("\n ans is: "+z);	
+	}
+}			 
+
+//--------------------------------------------------------------------------------------------------
+
+	// Arithmetic operators (+ - * / %)
+
+	// WAP to cal the simple interst. ( si=(p*r*n)/100 )
+
+	// Using java.util.Scanner to input the data
+
+import java.util.Scanner;
+class CalcSI
+{
+	public static void main(String []args)
+	{
+		int p=0,n=0;
+		double r=0.0, si=0.0;
+
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Enter the values of p: ");
+		p=sc.nextInt();
+		
+		System.out.println("Enter the values of r: ");
+		r=sc.nextDouble();
+
+		System.out.println("Enter the values of n: ");
+		n=sc.nextInt();
+		
+		si=(p*r*n)/100;
+		
+		System.out.println("Simple Interst is: "+si);
+	}
+}
+
+
+//--------------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+class DemoArith
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		
+		int a,b;
+		double ans;
+
+		System.out.println("Enter the values of a and b: ");
+		a=sc.nextInt();
+		b=sc.nextInt();
+
+		ans=a+b;
+		System.out.println("Addition is: "+ans);
+
+		ans=a-b;
+		System.out.println("sub is: "+ans);		
+
+		System.out.println("multi is: "+(a*b));
+
+		System.out.println("div is: "+(a/b));
+
+		ans=(double)a/b;
+		System.out.println("div is: "+ans);
+
+		System.out.println("mod is: "+(a%b));
+	
+	}
+}
+
+
+Note that the / operator return the quocient and the % gives the remainder.
+unlike the C Prog, the you can operate the % operator on negative values.
+ans the sign of numerator will assigned to final ans
+
+lets see,
+
+class DemoMod
+{
+	public static void main(String []args)
+	{
+		int a,b,ans;
+
+		a=-13;
+		b=5;
+		ans=a%b;
+		System.out.println("mod is: "+ans);
+
+		a=13;
+		b=-5;
+		ans=a%b;
+		System.out.println("mod is: "+ans);
+	
+		a=-13;
+		b=-5;
+		ans=a%b;
+		System.out.println("mod is: "+ans);
+	
+	}
+}
+
+//-----------------------------------------------------------------------------------------
+
+	// Relational Operators: (< <= > >= == !=)
+	
+		These operstors forms the condition. The ans of condition is
+		either true or false. where the true and false are the boolean values.
+
+		i.e.
+			if x=5	and y=45;
+			
+			boolean z=(x<y)	  here the boolen value true is assigned to z
+
+class DemoRel
+{
+	public static void main(String []args)
+	{
+		int x=5, y=45;
+		boolean b;
+
+		b=(x<y);
+		System.out.println(" value of b is: "+b);
+
+		b=(x>y);
+		System.out.println(" value of b is: "+b);
+		
+		b=(x==y);
+		System.out.println(" value of b is: "+b);
+		
+		b=(x!=y);
+		System.out.println(" value of b is: "+b);
+	}
+}
+
+//-------------------------------------------------------------------------------------
+
+	// Logical operators ( && || !) : used to join two or more conditions.
+
+
+		&& - gives true only when all conditions are true, otherwise false
+		|| - gives false only when all conditions false otherwise true
+
+		! -	!(true) means false
+			!(false) means true
+
+		
+		suppose x=10;	y=12
+
+		(x>y)&&(y<100) ---> false
+		(x<y)&&(y<100) ---> true
+
+
+class DemoLogical 
+{
+	public static void main(String[] args) 
+	{
+		int x=10, y=12;
+		boolean ans;
+
+		ans=(x>y)&&(y<100);		
+		System.out.println("(x>y)&&(y<100) is: "+ans);
+
+		ans=(x<y)&&(y<100);		
+		System.out.println("(x<y)&&(y<100) is: "+ans);
+
+		ans=(x>y)||(y<100);		
+		System.out.println("(x>y)||(y<100) is: "+ans);
+
+		ans=(x>y)||(y==100);		
+		System.out.println("(x>y)||(y==100) is: "+ans);
+
+		ans=!(x>y);		
+		System.out.println("!(x>y) is: "+ans);
+
+		ans=!(x<y);		
+		System.out.println("!(x>y) is: "+ans);
+		
+	}
+}
+
+//-------------------------------------------------------------------------------------------------------------------------
+
+	// Bitwise operators (& | ^ >> << >>> ): these operators are used to perform the bit-level operations
+
+
+	suppose,	x=10;		y=12;
+		 ( 0000 1010 )		(0000 1100)
+
+
+		x&y			x|y			x^y	
+
+		1010			1010			1010
+		1100			1100			1100
+	     -----------            ------------            --------------
+		1000			1110			0110
+
+		(8)			 (14)			 (6)
+
+
+	z=x<<2   refers to shift all bits of x towards left by 2 digits
+
+	(0000 1010) ===> (0010 10--) --> (0010 1000) ===> 40
+
+	
+	z=y>>2 refers to shift all bits of y towards right by 2 positions.
+	
+	(0000 1100) ==> (--00 0011) ==> As number is +ve MSB's are filled with zeros 
+
+	i.e. (0000 0011) ==> 3
+
+
+	import java.util.Scanner;
+class DemoBitOperations 
+{
+	public static void main(String[] args) 
+	{
+		int x=0,y=0,z=0;
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Enter the x: ");
+		x=sc.nextInt();
+		System.out.println("Enter the y: ");
+		y=sc.nextInt();
+
+		z=(x&y);
+		System.out.println("ANDing is: "+z);
+
+		z=(x|y);
+		System.out.println("ORing is: "+z);
+		
+		z=(x^y);
+		System.out.println("XORing is: "+z);
+
+		z=(x<<2);
+		System.out.println("x<<2 is: "+z);
+
+		z=(y>>2);
+		System.out.println("y>>2 is: "+z);
+
+		y=-12;
+		z=(y>>2);
+		System.out.println("y>>2 is: "+z);
+
+		y=-12;
+		z=(y>>>2);
+		System.out.println("y>>>2 is: "+z);
+	}
+}
+
+
+//====================================================================================================
+
+	// Conditional operator/ternary operator/if-then-else operator: (?:)
+
+	this is only operatoe which able to take the desicion
+
+	syntax:
+
+		<condi> ?  <True+ part> : <false_part> ;
+
+	/// WAP to find the max from two and three numbers
+
+import java.io.*;
+class DemoCondiOpt
+{
+	public static void main(String []args) throws Exception
+	{
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+
+		int x=0,y=0,z=0,max2=0,max3=0;
+
+		System.out.println("Enter any first numbers: ");
+		x=Integer.parseInt(br.readLine());
+
+		System.out.println("Enter any second numbers: ");
+		y=Integer.parseInt(br.readLine());
+
+		System.out.println("Enter any third numbers: ");
+		z=Integer.parseInt(br.readLine());
+
+		max2 = (x>y) ? x : y ;
+		System.out.println("\n Max2 value is: "+max2);
+
+		max3 = (x>y) ? (x>z)?x:z   :  (y>z) ? y:z ;
+		System.out.println("\n max3 is: "+max3);
+	}
+}
+
+//==========================================================================================================
+
+	// Control Instruction: Control instructions are used to control the execution flow of
+				your program. This instruction provides the different control
+				statement which are divided into condition control and unconditional
+				control statements
+
+
+						control Statements
+							|
+				--------------------------------------------------
+				|						|
+			conditional					un-conditional
+				|						|
+		---------------------------------			------------------------------------
+		|		|		|			|	|	|	           |
+	     Decision         loop             case 		     continue  break  labeled break     return
+		|               |               |					and
+	    - if()	      for()	    switch case				      labeled continue
+	    - if() else       while()
+	    - Nesting         do while()
+	    - ladder 
+		
+		    	 
+	using if(), if() else, nesting of if() else and Ladder: 
+
+
+	if(<>)			if(<>)
+	{			{
+		------;
+		------;
+	}			}
+				else
+				{
+
+
+				}
+			
+
+	// WAP to find the max from two nos
+
+import java.util.Scanner;
+class FindMax
+{
+	public static void main(String []args)
+	{
+		int x=0,y=0;
+
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Enter the first Number: ");
+		x=sc.nextInt();
+		System.out.println("Enter the second Number: ");
+		y=sc.nextInt();	
+
+		if(x>y)
+		{
+			System.out.println("value of x "+x+" is max");
+		}
+
+		if(y>x)
+		{
+			System.out.println("value of y "+y+" is max");
+		}
+	}
+}
+
+
+//--------------------------------------------------------------------------------------------
+
+	// WAP to find the total bill and apply discount of 6% when the total bill greater than 500.
+
+import java.util.Scanner;
+class DemoIf
+{
+	public static void main(String []args)
+	{
+		double p1,p2,p3,tot,dis=0.0;
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Enter the price of three items: ");
+		p1=sc.nextInt();
+		p2=sc.nextInt();
+		p3=sc.nextInt();
+
+		tot=p1+p2+p3;
+		if(tot>500)
+		{
+			dis=tot*0.06;
+		}
+		System.out.println(" Total Bill: "+tot);
+		System.out.println(" Discount: "+dis);
+		System.out.println(" Pay Rs: "+(tot-dis));
+	}
+}
+
+//--------------------------------------------------------------------------------------------
+
+// WAP to find the total bill and apply discount of 6% when the total bill less than 500 otherwise 12%.
+
+import java.util.Scanner;
+class DemoIfElse
+{
+	public static void main(String []args)
+	{
+		double p1,p2,p3,tot,dis=0.0;
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Enter the price of three items: ");
+		p1=sc.nextInt();
+		p2=sc.nextInt();
+		p3=sc.nextInt();
+
+		tot=p1+p2+p3;
+		if(tot<500)
+		{
+			dis=tot*0.06;
+		}
+		else
+		{
+			dis=tot*0.12;
+		}
+		System.out.println(" Total Bill: "+tot);
+		System.out.println(" Discount: "+dis);
+		System.out.println(" Pay Rs: "+(tot-dis));
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------
+
+	// Using if() else nesting: Using if() and/or if() else within if() and/or if() else.
+
+	// WAP to find the max from three numbers.
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+class DemoNesting
+{
+	public static void main(String []args) throws Exception
+	{
+		int x=0,y=0,z=0;
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter any three nos: ");
+		x=Integer.parseInt(br.readLine());
+		y=Integer.parseInt(br.readLine());
+		z=Integer.parseInt(br.readLine());
+
+		if(x>y)
+		{
+			if(x>z)
+			{
+				System.out.println(" x="+x+" is max");
+			}
+			else
+			{
+				System.out.println(" z="+z+" is max");
+			}
+		}
+		else
+		{
+			if(y>z)
+			{
+				System.out.println(" y="+y+" is max");
+			}
+			else
+			{
+				System.out.println(" z="+z+" is max");
+			}
+		}
+	}
+}
+
+//----------------------------------------------------------------------------------------------------
+
+	/// Using if() else ladder
+
+	if()
+	{
+	}
+	else if()
+	{
+	}
+	else if()
+	{
+	}
+	else if()
+	{
+	}
+	else 
+	{
+	}
+
+
+	/// WAP to input the co-ordinates of point in 2D system and display its location.
+
+
+				     y Axis (all x cord are 0)
+					^
+			II		|		I
+			(-+)		|	       (++)
+					|
+					|
+					|
+					|
+		<-----------------------|----------------------------> x Axis
+					|(0,0)				(all y cord are 0)
+					|
+					|
+					|
+					|
+			(--)		|		(+-)
+			III		|		IV
+					V
+					
+import java.util.Scanner;
+class DemoLadder
+{
+	public static void main(String []args)
+	{
+		int x,y;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the co-ordinates of point: ");
+		x=sc.nextInt();
+		y=sc.nextInt();
+
+		if(x>0&&y>0)
+		{
+			System.out.println(" 1st QD");
+		}
+		else if(x<0&&y>0)
+		{
+			System.out.println(" 2nd QD");
+		}
+		else if(x<0&&y<0)
+		{
+			System.out.println(" 3rd QD");
+		}
+		else if(x>0&&y<0)
+		{
+			System.out.println(" 4th QD");
+		}
+		else if(x!=0&&y==0)
+		{
+			System.out.println(" On x axis");
+		}
+		else if(x==0&&y!=0)
+		{
+			System.out.println(" On y axis");
+		}
+		else
+		{
+			System.out.println(" In org");
+		}
+	}
+}
+
+///----------------------------------------------------------------------------------------------
+
+	///	Loops in Java
+
+	1. for()			2. while()			3. do while()
+
+	for(<>;<>;<>)			while(<>)			do
+	{				{				{
+		---------;			----------;			----------;
+		---------;			----------;			----------;
+		---------;			----------;			----------;
+		---------;			----------;			----------;
+	}				}				}while(<>);
+
+
+	/// WAP to display 1=12 nos using the loops
+
+class DemoFor
+{
+	public static void main(String []args)
+	{
+		int i;
+		for(i=1;i<=12;i++)
+		{
+			System.out.println(" "+i);
+		}
+	}
+}
+
+class DemoWhile
+{
+	public static void main(String []args)
+	{
+		int i;
+		i=1;
+		while(i<=12)
+		{
+			System.out.println(" "+i);
+			i++;
+		}
+	}
+}
+
+
+class DemoDoWhile
+{
+	public static void main(String []args)
+	{
+		int i;
+		i=1;
+		do
+		{
+			System.out.println(" "+i);
+			i++;
+		}while(i<=12);
+	}
+}
+
+//---------------------------------------------------------------------------------------------------
+
+	// WAP to count and display the divisibles of 3 and 5 from a range 2 to 50.
+
+class DemoDiv
+{
+	public static void main(String []args)
+	{
+		int no,cnt=0;
+		System.out.print("The list of nos which are div by 3 and 5: ");
+		for(no=2;no<=50;no++)
+		{
+			if(no%3==0&&no%5==0)
+			{
+				System.out.print("\t"+no);
+				cnt++;
+			}
+		}
+		System.out.println("\n Count is: "+cnt);
+	}
+}
+
+
+//----------------------------------------------------------------------------------
+
+	// WAP to input 10 nos ans add even and odd nos sep.
+
+import java.util.*;
+class AddEvenOdd
+{
+	public static void main(String []args)
+	{
+		int no,ev=0,od=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter any 10 nos: ");
+		for(int i=0;i<10;i++)
+		{
+			System.out.print("No "+(i+1)+": ");
+			no=sc.nextInt();
+			if(no%2==0)
+			{
+				ev=ev+no;
+			}
+			else
+			{
+				od=od+no;
+			}
+		}
+		System.out.println("Even Sum: "+ev);
+		System.out.println("Odd Sum: "+od);
+	}
+}
+
+//----------------------------------------------------------------------------------------------
+
+	// WAP to display the number prime or not.
+
+import javax.swing.JOptionPane;
+class DemoPrime
+{
+	public static void main(String []args)
+	{
+		int no,d,flg=0;
+		no=Integer.parseInt(JOptionPane.showInputDialog("Enter the Number: "));
+		System.out.println("\n Entered Number: "+no);
+
+		d=2;
+		while( d<=(no/2) )
+		{
+			if(no%d==0)
+			{
+				flg=1;
+				break;
+			}
+			d++;
+		}
+		if(flg==0)
+			System.out.println("No is Prime");
+		else
+			System.out.println("No is not Prime");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
