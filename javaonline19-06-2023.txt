@@ -1331,6 +1331,175 @@ class DemoPrime
 }
 
 
+//---------------------------------------------------------------------------------------------
+
+
+	// Enter a number thw keyboard and just reverse it.
+
+import javax.swing.JOptionPane;
+class RevNumber
+{
+	public static void main(String []args)
+	{
+		int no=Integer.parseInt(JOptionPane.showInputDialog("Enter any number: "));
+
+		System.out.println("The Enterednumber is: "+no);
+
+		int rem, rev=0;
+		while(no!=0)
+		{
+			rem=no%10;
+			rev=(rev*10)+rem;
+			no=no/10;
+		}
+		System.out.println(" The reverse Number is: "+rev);
+	}
+}
+
+
+//--------------------------------------------------------------------------------
+
+	// WAP to find the entered number is palindrome or not.
+
+		121 ----> reverse it ----> 121	===> No is palindrome
+		458 ----> reverse it ----> 854	===> No is not palindrome
+
+import javax.swing.JOptionPane;
+class PalNumber
+{
+	public static void main(String []args)
+	{
+		int no=Integer.parseInt(JOptionPane.showInputDialog("Enter any number: "));
+
+		System.out.println("The Enterednumber is: "+no);
+
+		int tmp,rem, rev=0;
+		tmp=no;
+		while(no!=0)
+		{
+			rem=no%10;
+			rev=(rev*10)+rem;
+			no=no/10;
+		}
+
+		if(tmp==rev)
+		{
+			System.out.println(" Number "+rev+" is Palindrome");
+		}
+		else
+		{			
+			System.out.println(" Number "+rev+" is not Palindrome");
+		}
+	}
+}
+
+//--------------------------------------------------------------------------------------
+
+	// using the do..while() loop
+
+	// WAP to input one number and just find the max digit from it.
+
+		no=4596 ===> max digit-> 9
+		no=3416 ===> max digit-> 6
+
+import java.util.Scanner;
+class MaxDigit
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter any number: ");
+		int no=sc.nextInt();
+
+		int rem, md=0;
+		do
+		{
+			rem=no%10;
+			if(rem>md)
+			{
+				md=rem;
+			}
+			no=no/10;
+		}while(no!=0);
+
+		System.out.println("Max digit is "+md);
+	}
+}
+
+//-----------------------------------------------------------------------------------------------
+
+	// Enter the number thw keyboard and generate the possible max number using its digits.
+
+		496 ===> 964
+		39571 --> 97531
+
+import java.util.Scanner;
+class GenMax 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("Enter any number: ");
+		int no=sc.nextInt();
+
+		int d,nn=0,rem,tmp;
+		tmp=no;
+		d=9;
+		do
+		{
+			no=tmp;
+			while(no!=0)
+			{
+				rem=no%10;
+				if(rem==d)
+				{
+					nn=(nn*10)+rem;
+				}
+				no=no/10;
+			}
+		}while(--d>=0);
+
+		System.out.println("Possible max: "+nn);
+	}
+}
+
+//---------------------------------------------------------------------------------------------------------
+
+	// WAP to keep adding the numbers entered thw keyboard till user wants.
+
+import java.util.Scanner;
+class AddNos 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int no,sum=0;
+		char ch;
+		do
+		{			
+			System.out.println("Enter Number: ");
+			no=sc.nextInt();
+			sum=sum+no;
+			
+			System.out.println("Press y to continue and n to stop: ");
+			sc.nextLine();
+			ch=sc.nextLine().charAt(0); // "hello" ---> 'h' and    "y" ---> 'y'
+			if(ch!='y')
+			{
+				break;
+			}
+		}while(true);
+		System.out.println("Sum of all entered nos: "+sum);
+	}
+}
+
+
+
+
+
+
+
 
 
 
