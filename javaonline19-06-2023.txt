@@ -1494,10 +1494,319 @@ class AddNos
 	}
 }
 
+//------------------------------------------------------------------------------------------------------
+
+	// Using switch() case: 
+
+	syntax:
+
+		switch(<opt>)
+		{
+			case <CC1>:
+				-----------;
+				-----------;
+				break;
+			case <CC2>:
+				-----------;
+				-----------;
+				break;
+			case <CC3>:
+				-----------;
+				-----------;
+				break;
+			case <CC4>:
+				-----------;
+				-----------;
+				break;
+			      .
+			      .
+			case <CCN>:
+				-----------;
+				-----------;
+				break;
+			[<default:>]
+				-----------;;
+		}
 
 
+	// WAP using switch() to perform the different arith. operations
+
+import java.util.Scanner;
+class DemoSwitch
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		double a,b,ans=0;
+		int opt;
+		System.out.println("\n ***** Menu ****** ");
+		System.out.println(" 1.add \n 2.sub \n 3.multi \n 4.div");
+		System.out.println("Choose your option: ");
+		opt=sc.nextInt();
+
+		System.out.println("Enter any two nos: ");
+		a=sc.nextDouble();
+		b=sc.nextDouble();
+
+		switch(opt)
+		{
+			case 1:
+				ans=a+b;
+				break;
+			case 2:
+				ans=a-b;
+				break;
+			case 3:
+				ans=a*b;
+				break;
+			case 4:
+				ans=a/b;
+				break;
+			default:
+				System.out.println("Incorrect Option..!!!");
+		}
+		System.out.println("Ans is: "+ans);
+	}
+}
+
+///-------------------------------------------------------------------------------
+
+	// You are allowed to used character options
+
+import java.util.Scanner;
+class DemoSwitchCharOpt
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		double a,b,ans=0;
+		char opt;
+		System.out.println("\n ***** Menu ****** ");
+		System.out.println(" p.add \n q.sub \n r.multi \n s.div");
+		System.out.println("Choose your option: ");
+		opt=sc.nextLine().charAt(0);
+
+		System.out.println("Enter any two nos: ");
+		a=sc.nextDouble();
+		b=sc.nextDouble();
+
+		switch(opt)
+		{
+			case 'p':
+			case 'P':
+				ans=a+b;
+				break;
+			case 'q':
+			case 'Q':
+				ans=a-b;
+				break;
+			case 'r':
+			case 'R':
+				ans=a*b;
+				break;
+			case 's':
+			case 'S':
+				ans=a/b;
+				break;
+			default:
+				System.out.println("Incorrect Option..!!!");
+		}
+		System.out.println("Ans is: "+ans);
+	}
+}
+
+//--------------------------------------------------------------------------------
+
+	// Using the switch() within loop
+
+import java.util.Scanner;
+class DemoSwitchInCLoop
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		double a,b,ans=0;
+		int opt,k=0;
+		while(k<3)
+		{
+			k++;
+			System.out.println("\n ***** Menu ****** ");
+			System.out.println(" 1.add \n 2.sub \n 3.multi \n 4.div");
+			System.out.println("Choose your option: ");
+			opt=sc.nextInt();
+
+			System.out.println("Enter any two nos: ");
+			a=sc.nextDouble();
+			b=sc.nextDouble();
+
+			switch(opt)
+			{
+				case 1:
+					ans=a+b;
+					break;
+				case 2:
+					ans=a-b;
+					break;
+				case 3:
+					ans=a*b;
+					break;
+				case 4:
+					ans=a/b;
+					break;
+				default:
+					System.out.println("Incorrect Option..!!!");
+			}
+			System.out.println("Ans is: "+ans);
+		}
+	}
+}
+
+//------------------------------------------------------------------------
+
+	// Using the switch() within infinite loop
+
+import java.util.Scanner;
+class DemoSwitchInILoop
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		double a,b,ans=0;
+		int opt;
+		while(true)
+		{
+			System.out.println("\n ***** Menu ****** ");
+			System.out.println(" 1.add \n 2.sub \n 3.multi \n 4.div \n 5.stop");
+			System.out.println("Choose your option: ");
+			opt=sc.nextInt();
+
+			System.out.println("Enter any two nos: ");
+			a=sc.nextDouble();
+			b=sc.nextDouble();
+
+			switch(opt)
+			{
+				case 1:
+					ans=a+b;
+					break;
+				case 2:
+					ans=a-b;
+					break;
+				case 3:
+					ans=a*b;
+					break;
+				case 4:
+					ans=a/b;
+					break;
+				case 5:
+					System.exit(0);
+			}
+			System.out.println("Ans is: "+ans);
+		}
+	}
+}
+
+//------------------------------------------------------------------------------
+
+	// Unconditional control statements
+
+	- break: will terminate the loop unconditionally. And pass the program
+		 control out of switch() from case.
+
+     // WAP to Keep on adding the numbers till user will not enter the -ve value.
+
+import java.util.Scanner;
+class DemoBreak
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int no,add=0;
+		while(true)
+		{
+			System.out.println("Enter any number: ");
+			no=sc.nextInt();
+			if(no<0)
+			{
+				break;
+			}
+			add=add+no;
+		}
+		System.out.println("ans is "+add);
+	}
+}
+
+//---------------------------------------------------------------------------
+
+	// continue: It will pass the control to next ineration without executing
+		     the remaining body of loop.
 
 
+class DemoContinue 
+{
+	public static void main(String[] args) 
+	{
+		int i,j;
+		for(i=0;i<10;i++)
+		{
+			for(j=0;j<10;j++)
+			{
+				System.out.print("-");
+				if(j>i)
+				{
+					continue;
+				}
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
+	}
+}
+
+//----------------------------------------------------------------------
+
+	// Labeled break and labeled continue
+
+class LblBreakContinue
+{
+	public static void main(String[] args) 
+	{
+		int i,j;
+		outer:for(i=0;i<10;i++)
+		{
+			System.out.println("");
+			for(j=0;j<10;j++)
+			{
+				if(i==5)
+				{
+					break outer;
+				}
+				System.out.print("-");
+				if(j>i)
+				{
+					continue outer;
+				}
+				System.out.print("*");
+			}
+		}
+	}
+}
+
+//-----------------------------------------------------------------------
+
+	// retrun: pass the control back to calling method from called method
+
+class DemoReturn 
+{
+	public static void main(String[] args) 
+	{
+		int i=0;
+		System.out.println("Hello World!");
+		if(i==0)
+			return;
+		System.out.println("Hello World again....!!!");
+	}
+}
 
 
 
