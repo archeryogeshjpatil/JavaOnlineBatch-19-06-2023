@@ -1956,15 +1956,196 @@ class ArrayInputSizeRt
 	}
 }
 
+//----------------------------------------------------------------------------------------------------------
 
+	// WAP to count the even and odd nos from array
 
+import java.util.Scanner;
+class CountEvOdArr
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int []ar=new int[7];
 
+		System.out.println("Enter the 7 Nos: ");
+		for(int i=0;i<7;i++)
+		{
+			ar[i]=sc.nextInt();
+		}
+		int ec=0,oc=0;
+		for(int i=0;i<7;i++)
+		{
+			if(ar[i]%2==0)
+				ec++;
+			else
+				oc++;
+		}
+		
+		System.out.print("Elements are: ");
+		for(int i=0;i<7;i++)
+		{
+			System.out.print("  "+ar[i]);
+		}
+		System.out.print("\n Even Element count: "+ec);
+		System.out.print("\n Odd Element count: "+oc);
+	}
+}
 
+//--------------------------------------------------------------------------
 
+	// WAP to display the list of prime nos from array
 
+import java.util.Scanner;
+class PrimeListArr
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("\n Enter the element count: ");
+		int cnt=sc.nextInt();
 
+		int []ar=new int[cnt];
 
+		System.out.println("Enter the "+cnt+" Nos: ");
+		for(int i=0;i<cnt;i++)
+		{
+			ar[i]=sc.nextInt();
+		}
+		int no, d, flg=0, pc=0;
+		System.out.println("\n Prime nos: ");
+		for(int i=0;i<7;i++)
+		{
+			no=ar[i];
+			d=2;
+			flg=0;
+			while(d<=(no/2))
+			{
+				if(no%d==0)
+				{
+					flg=1;
+					break;
+				}
+				d++;
+			}
+			if(flg==0)
+			{
+				pc++;
+				System.out.println("  "+no);
+			}
+		}
+		System.out.print("\n Prime count: "+pc);
+		System.out.print("Elements are: ");
+		for(int i=0;i<ar.length;i++)
+		{
+			System.out.print("  "+ar[i]);
+		}
+	}
+}
 
+//-----------------------------------------------------------------------------
+
+// Enter the array of size 6 thw keyboard and make its 1 copy and 1 reverse copy.
+
+import java.util.Scanner;
+class CopyRevCopy
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int []ar=new int[6];
+
+		System.out.println("Enter the 6 Nos: ");
+		for(int i=0;i<ar.length;i++)
+		{
+			ar[i]=sc.nextInt();
+		}
+		
+		// copy
+		int []x=new int[ar.length];
+		for(int i=0;i<ar.length;i++)
+		{
+			x[i]=ar[i];
+		}
+		/*
+			ar 0    1   2    3     4    5
+			 [23] [56] [89] [12] [82] [33]
+
+			 y 0    1    2    3    4    5
+			  [33] [82] [12] [89] [56] [23] 
+		
+		*/
+			
+		// Reverse copy
+		int []y=new int[ar.length];
+		for(int i=0;i<ar.length;i++)
+		{
+			y[i]=ar[5-i];
+		}
+
+		
+		System.out.print("\n Original array Elements are: ");
+		for(int i=0;i<ar.length;i++)
+		{
+			System.out.print("  "+ar[i]);
+		}
+
+		System.out.print("\n Simple Copy: ");
+		for(int i=0;i<ar.length;i++)
+		{
+			System.out.print("  "+x[i]);
+		}
+
+		System.out.print("\n Reverse Copy: ");
+		for(int i=0;i<ar.length;i++)
+		{
+			System.out.print("  "+y[i]);
+		}
+	}
+}
+
+//-----------------------------------------------------------------------------
+
+	// WAP to perform the search operation in an array.
+
+import java.util.Scanner;
+class DemoSerchArr
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int i,no=0;
+		int []arr=new int[8];
+		
+		System.out.println("Enter the 8 elements: ");
+		for(i=0;i<arr.length;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+
+		System.out.println("Enter the no to be searched: ");
+		no=sc.nextInt();
+
+		int pos=-1;
+		for(i=0;i<arr.length;i++)
+		{
+			if(arr[i]==no)
+			{
+				pos=i;
+				break;
+			}
+		}
+		if(pos!=-1)
+			System.out.println("\n Number is present at "+pos+" Position");
+		else
+			System.out.println("\n No is not present in an array");
+	}
+}
+
+//---------------------------------------------------------------------------
+
+	// Write a program to sort an array using any algo.
+	// WAP to search second min and second max from array.
 
 
 
