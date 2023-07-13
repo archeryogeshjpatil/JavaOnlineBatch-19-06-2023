@@ -2145,6 +2145,208 @@ class DemoSerchArr
 //---------------------------------------------------------------------------
 
 	// Write a program to sort an array using any algo.
+
+import java.util.Scanner;
+class SortArray
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the element count: ");
+		int cnt=sc.nextInt();
+
+		int []arr=new int[cnt];
+		System.out.println("Enter the "+cnt+" elements: ");
+		for(int i=0;i<arr.length;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+
+		System.out.print("\n Before Sort: ");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print("  "+arr[i]);
+		}
+
+		// Sorting
+		int tmp;
+		for(int i=0;i<(arr.length-1);i++)
+		{
+			for(int j=i+1;j<arr.length;j++)
+			{
+				if(arr[i]>arr[j])
+				{
+					tmp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=tmp;
+				}
+			}
+		}
+
+		System.out.print("\n After Sort: ");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print("  "+arr[i]);
+		}
+	}
+}
+
+//-----------------------------------------------------------------------
+
+	// Using 2D Array in java
+
+
+	Array of 3X4
+
+	[][][][]  - 0
+        [][][][]  - 1 rows
+        [][][][]  - 2
+	 | | | |
+	 0 1 2 3
+	   cols
+        
+	how to decl the 2D array in java.
+
+	int [][]x;
+
+	Here in this only reference is created. To allocate the memory we
+	need to use the new operator as shown below.
+
+	int [][]x=new int[3][4];
+
+
+	// Init and Display the 2D array.
+
+class Init2D
+{
+	public static void main(String []args)
+	{
+		int [][]x={ {12,23,34,45},{11,22,33,44},{67,34,19,68} };
+
+		System.out.println("\n Array elements are: ");
+		for(int i=0;i<3;i++)
+		{
+			for(int j=0;j<4;j++)
+			{
+				System.out.print("  "+x[i][j]);
+			}
+			System.out.println();
+		}
+	}
+}
+
+//--------------------------------------------------------------------------------
+
+	// Or you can use the length as shown below
+
+class Init2D
+{
+	public static void main(String []args)
+	{
+		int [][]x={ {12,23,34,45},{11,22,33,44},{67,34,19,68} };
+
+		System.out.println("\n Array elements are: ");
+		for(int i=0;i<x.length;i++)
+		{
+			for(int j=0;j<x[i].length;j++)
+			{
+				System.out.print("  "+x[i][j]);
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+
+	// WAP to input and display the 2D array
+
+import java.util.Scanner;
+class InputDisplay2DArray
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int [][]x=new int[3][3];
+
+		System.out.println("\n Enter the array of 3x3: ");
+		for(int i=0;i<x.length;i++)
+		{
+			for(int j=0;j<x[i].length;j++)
+			{
+				x[i][j]=sc.nextInt();
+			}
+		}
+
+		System.out.println("\n Array elements are: ");
+		for(int i=0;i<x.length;i++)
+		{
+			for(int j=0;j<x[i].length;j++)
+			{
+				System.out.print("  "+x[i][j]);
+			}
+			System.out.println();
+		}
+	}
+}
+
+//-------------------------------------------------------------------------
+
+
+// WAP to input and display the 2D array - no of rows and cols decided at runtime.
+
+	// Enter the marks of N students in M subjects.
+
+import java.util.Scanner;
+class InputDisplay2DArrayDynamicSize
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int m=0,n=0;
+
+		System.out.println("Enter the student count: ");
+		m=sc.nextInt();
+
+		System.out.println("Enter the subject count: ");
+		n=sc.nextInt();
+		int [][]x=new int[m][n];
+
+		System.out.println("\n Enter the Marks: ");
+		for(int i=0;i<x.length;i++)
+		{
+			for(int j=0;j<x[i].length;j++)
+			{
+				System.out.println("\n Enter the marks of "+(i+1)+" student in "+(j+1)+" subject:");
+				x[i][j]=sc.nextInt();
+			}
+		}
+
+		System.out.println("\n Array elements are: ");
+		for(int i=0;i<x.length;i++)
+		{
+			System.out.println("\n Student: "+(i+1)+": ");
+			for(int j=0;j<x[i].length;j++)
+			{
+				System.out.print("  "+x[i][j]);
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 	// WAP to search second min and second max from array.
 
 
