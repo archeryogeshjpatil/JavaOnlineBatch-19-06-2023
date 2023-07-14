@@ -2335,6 +2335,158 @@ class InputDisplay2DArrayDynamicSize
 	}
 }
 
+//----------------------------------------------------------------------------
+
+	// Variable Size array (Jagged Array)
+
+	ar		      0 1 2 3 4 5 	
+	[] -----> 0[] -----> [][][][][][]
+		  1[] -----> [][]
+		  2[] -----> [][][][]
+		  3[] -----> [][][]
+
+
+	// Enter the marks 4 students in N subjects (Note that, N may be different
+	// for every student and it represents no of subjects)
+
+import java.util.Scanner;
+class DemoJaggedArray
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int [][]x=new int[4][];
+		
+		System.out.println("Enter the Details of 4 students: ");
+		for(int i=0;i<4;i++)
+		{
+			System.out.println("Enter the subject count of "+(i+1)+" student: ");
+			int cnt=sc.nextInt();
+			x[i]=new int[cnt];
+			System.out.println("Enter the marks in "+cnt+" subjects: ");
+			for(int j=0;j<cnt;j++)
+			{
+				System.out.println("Subject "+(j+1)+": ");
+				x[i][j]=sc.nextInt();
+			}
+		}
+		System.out.println("\n Student Details ");
+		for(int i=0;i<x.length;i++)
+		{
+			System.out.print("\n Student: "+(i+1)+": ");
+			for(int j=0;j<x[i].length;j++)
+			{
+				System.out.print("  "+x[i][j]);
+			}
+			System.out.println();
+		}
+	}
+}
+
+///=============================================================================
+
+	// Using the java.util.Arrays class
+
+	This class contains various methods for manipulating arrays (such as sorting 
+	and searching). This class also contains a static factory that allows arrays 
+	to be viewed as lists.
+
+	- public static int binarySearch(int[] a, int key)
+	a - the array to be searched
+	key - the value to be searched for
+
+	Searches the specified array of ints for the specified value using the binary
+	search algorithm. The array must be sorted (as by the sort(int[]) method) 
+	prior to making this call. If it is not sorted, the results are undefined.
+
+	Returns: index of the search key, if it is contained in the array;
+
+	- public static void sort(int[] a)
+	a - the array to be sorted
+	
+	Sorts the specified array into ascending numerical order.
+import java.util.Scanner;
+import java.util.Arrays;
+class DemoArraysClassMethods
+{
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int []x=new int[7];
+
+		System.out.println("\n Enter the 7 elems: ");
+		for(int i=0;i<x.length;i++)
+		{
+			x[i]=sc.nextInt();
+		}
+		System.out.println("\n Enter the number to be searched: ");
+		int no=sc.nextInt();
+
+		System.out.println("\n Array elements before sort: ");
+		for(int i=0;i<x.length;i++)
+		{
+			System.out.print("  "+x[i]);
+		}
+
+		Arrays.sort(x);
+
+		System.out.println("\n Array elements after sort: ");
+		for(int i=0;i<x.length;i++)
+		{
+			System.out.print("  "+x[i]);
+		}
+
+		int pos=-1;
+		pos=Arrays.binarySearch(x,no);
+		if(pos>=0)
+			System.out.println("\n Nos is present at "+pos+" Position");
+		else
+			System.out.println("\n Nos is absent");
+		
+	}
+}
+
+/// You can also write
+
+import java.util.Scanner;
+import java.util.Arrays;
+class DemoArraysClassMethods
+{
+	public static void display(int []a)
+	{		
+		System.out.println("\n Array elements before sort: ");
+		for(int i=0;i<a.length;i++)
+		{
+			System.out.print("  "+a[i]);
+		}
+
+	}
+	public static void main(String []args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int []x=new int[7];
+
+		System.out.println("\n Enter the 7 elems: ");
+		for(int i=0;i<x.length;i++)
+		{
+			x[i]=sc.nextInt();
+		}
+		System.out.println("\n Enter the number to be searched: ");
+		int no=sc.nextInt();
+
+		display(x);
+		Arrays.sort(x);
+		display(x);
+
+		int pos=-1;
+		pos=Arrays.binarySearch(x,no);
+		if(pos>=0)
+			System.out.println("\n Nos is present at "+pos+" Position");
+		else
+			System.out.println("\n Nos is absent");
+		
+	}
+}
 
 
 
@@ -2346,8 +2498,6 @@ class InputDisplay2DArrayDynamicSize
 
 
 
-
-	// WAP to search second min and second max from array.
 
 
 
