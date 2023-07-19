@@ -2488,32 +2488,140 @@ class DemoArraysClassMethods
 	}
 }
 
+//-------------------------------------------------------------------------------
+
+	// OOP in Java
+
+ The are five pilors of object oriented programming.
+
+ - class
+ - Object
+ - Data Hiding
+ - Encapsulation
+ - Abstration
 
 
+What is class?
+	It is logical construct, which is used to allocate the memory. or in simple 
+	words it is user defined data type, which contains data members and member
+	functions used to access those data members, and it is refered at the time 
+	of memory allocation.
 
 
+	Decl. Systex:
+
+	class <cls_nm>
+	{
+		<visibility> <data_type> <instance_var_nm>;
+		<visibility> <data_type> <instance_var_nm>;
+		<visibility> <data_type> <instance_var_nm>;
+		.....
+		
+		<visibility> <return_type> <method_nm>();
+		<visibility> <return_type> <method_nm>();
+		<visibility> <return_type> <method_nm>();
+		....
+	}
+
+	e.g.
+	class Student
+	{
+		private int id;
+		private double per;
+		private char gen;
+	    
+		public void in()
+		{
+		}
+		public void out()
+		{
+		}
+	}
+
+	Note:
+		- You have to mention the visibility for each member of class.
+		- Try to write the first letter of every word from class name in
+		  uppercase and all other letters in lower case. 
+
+What is object: 
+
+	- It is variable of class type
+	- It is runtime entity created after refering the class to hold the data 
+	  members and it also comes with the methods to access those data members.
+
+	syntax:
+		<class_nm> <object_nm>;
+		e.g.
+		Student sob;
+
+		Note carefully that it will create the refernce only means it is
+		same as pointer variable in C prog. here in java it is call as
+		reference variable.
+
+		s
+		[ ]
+
+		To allocate the memory you need to use the new operator as
+
+		Student s;
+		s=new Student();
+
+		s
+		[ ] -------> [][][][][][][]
+	     ref. var          actual location where 
+	     			data will be stored.
 
 
+What is Data Hiding?
 
+	The private data of class is not accessable directly using . operator.
+	means it is get hided from outside world. that property of class is known 
+	as data hiding.
 
+What is Encapsulation?
 
+	Wrapping up of data members and methods together under single unit is known
+	as Encapsulation.
 
+What is Abstraction: 
 
+	- Without knowing to much about it.
+	- It is art of defining the type with including its background details.
+	- the data types wcich  supports the abstraction known as Abstract Data
+	  types (ADT) 
 
+	// Simple class-Object Example
 
+import java.util.Scanner;
+class Student
+{
+	private int id;
+	private double per;
+    
+	public void in()
+	{
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter the student ID: ");
+		id=sc.nextInt();
+		System.out.println("Enter the Percentage: ");
+		per=sc.nextDouble();
+	}
+	public void out()
+	{
+		System.out.println("\n student ID: "+id+"\t Percentage: "+per);
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+class StudentProject
+{
+	public static void main(String []args)
+	{
+		Student sob=new Student();
+		sob.in();
+		sob.out();
+	}
+}
 
 
 
